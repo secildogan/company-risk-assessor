@@ -495,13 +495,13 @@ Currently shipped:
 | GB | Companies House, directors, adverse media, business description | Live data |
 | US | SEC EDGAR (stubbed), adverse media, business description | Stubbed — see `lib/sources/secEdgar.ts` header for the real-implementation sketch |
 
-## Example: Monzo Bank Limited
+## Example: Nimbus Bank Limited (fictional)
 
 Request:
 
 ```bash
 curl -N -H 'Content-Type: application/json' \
-  -d '{"companyName":"Monzo Bank Limited","registrationNumber":"09446231","jurisdiction":"GB"}' \
+  -d '{"companyName":"Nimbus Bank Limited","registrationNumber":"12345678","jurisdiction":"GB"}' \
   http://localhost:3000/api/assess
 ```
 
@@ -534,25 +534,25 @@ data: {"source":"businessDescription","status":"success"}
 
 event: complete
 data: {
-  "resolvedName": "MONZO BANK LIMITED",
-  "registrationNumber": "09446231",
+  "resolvedName": "NIMBUS BANK LIMITED",
+  "registrationNumber": "12345678",
   "jurisdiction": "GB",
-  "registeredAddress": "Broadwalk House, 5 Appold Street, London, EC2A 2AG",
-  "incorporationDate": "2015-02-06",
+  "registeredAddress": "100 Example Street, London, EX1 2MP",
+  "incorporationDate": "2018-05-10",
   "companyStatus": "active",
   "sicCodes": ["64190"],
-  "filingCount": 300,
-  "lastAccountsDate": "2025-11-30",
-  "businessDescription": "A UK-based digital bank providing current accounts, savings, lending, and business banking services.",
+  "filingCount": 120,
+  "lastAccountsDate": "2024-12-31",
+  "businessDescription": "A UK digital bank providing retail and business banking services.",
   "directors": [
     {
-      "name": "ANIL, Tahir Mohammed",
+      "name": "DOE, Jane Alex",
       "appointedDate": "2020-05-05",
       "isActive": true,
       "otherActiveAppointments": 2
     },
     {
-      "name": "ANSON, Thomas Samuel Christopher",
+      "name": "SMITH, Jordan Taylor",
       "appointedDate": "2021-06-21",
       "isActive": true,
       "otherActiveAppointments": 1
